@@ -1,6 +1,6 @@
-.PHONY: all
-
 EXECUTABLES=fib_rec fib_dp fib_dp2 fib_dp3
+
+.PHONY: all
 
 all: $(EXECUTABLES)
 
