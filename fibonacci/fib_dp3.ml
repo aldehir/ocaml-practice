@@ -3,14 +3,13 @@
  *)
 open Entry
 
-let rec fib_iteration iterations a b =
-  match iterations with
+let rec fib_iteration a b = function
   | 0 -> a
   | 1 -> b
-  | _ -> fib_iteration (iterations - 1) b (a + b)
+  | n -> fib_iteration b (a + b) (n - 1)
 
 let fib n =
-  fib_iteration n 0 1
+  fib_iteration 0 1 n
 
 let () =
   main fib
